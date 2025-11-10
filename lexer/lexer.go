@@ -22,9 +22,9 @@ func (l *Lexer) readChar() {
 		l.ch = 0
 	} else {
 		l.ch = l.input[l.readPosition]
-		l.position = l.readPosition
-		l.readPosition += 1
 	}
+	l.position = l.readPosition
+	l.readPosition += 1
 }
 
 func (l *Lexer) NextToken() token.Token {
